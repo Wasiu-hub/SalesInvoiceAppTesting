@@ -38,11 +38,13 @@ public class Search {
         String expectedListProducts = driver.findElement(By.id("products_index")).getText();
         Assert.assertEquals(expectedListProducts, listProducts.trim());
 
+        Thread.sleep(1000);
+
         String addProduct = "Add Product";
         String expectedAddProducts = driver.findElement(By.id("products_add")).getText();
         Assert.assertEquals(expectedAddProducts, addProduct);
 
-        driver.close();
+//        driver.close();
 
     }
 }
